@@ -14,7 +14,7 @@ export const Hero = () => {
     <section id="inicio" className="pt-24 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-800 text-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.1"%3E%3Cpath d="M20 20c0 11-9 20-20 20s-20-9-20-20 9-20 20-20 20 9 20 20zm-30-15v30l15-15-15-15z"/%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22white%22%20fill-opacity%3D%220.1%22%3E%3Cpath%20d%3D%22M20%2020c0%2011-9%2020-20%2020s-20-9-20-20%209-20%2020-20%2020%209%2020%2020zm-30-15v30l15-15-15-15z%22/%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
