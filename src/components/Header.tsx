@@ -20,9 +20,9 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/d4640182-c867-485c-8826-55cb464bef9c.png" 
+              src="/lovable-uploads/abf01c4c-4a50-460f-9efa-988bddd73e18.png" 
               alt="AloyTech Logo" 
-              className="w-12 h-12"
+              className="h-10 w-auto"
             />
             <div>
               <h1 className="text-xl font-bold text-blue-900">AloyTech</h1>
