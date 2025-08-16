@@ -21,12 +21,12 @@ export const Header = () => {
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/d4640182-c867-485c-8826-55cb464bef9c.png" 
-              alt="MIIAO Logo" 
+              alt="AloyTech Logo" 
               className="w-12 h-12"
             />
             <div>
-              <h1 className="text-xl font-bold text-blue-900">MIIAO</h1>
-              <p className="text-sm text-blue-600">IA DE OPERACIONES</p>
+              <h1 className="text-xl font-bold text-blue-900">AloyTech</h1>
+              <p className="text-sm text-blue-600">SOLUCIONES TECNOLÓGICAS</p>
             </div>
           </div>
 

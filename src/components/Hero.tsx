@@ -30,7 +30,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Especialistas en transcripción de audio en tiempo real, auditorías ISO 27001, 
+            Especialistas en transcripción de audio en tiempo real, 
             consultoría CRM/ERP y capacitaciones tecnológicas que impulsan tu negocio.
           </p>
           

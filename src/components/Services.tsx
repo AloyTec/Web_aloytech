@@ -11,12 +11,6 @@ export const Services = () => {
       features: ["Precisión del 99%", "Múltiples idiomas", "Integración API", "Tiempo real"]
     },
     {
-      icon: <Shield className="w-12 h-12 text-blue-600" />,
-      title: "Auditorías ISO 27001",
-      description: "Evaluaciones completas de seguridad de la información para garantizar el cumplimiento de estándares internacionales.",
-      features: ["Evaluación completa", "Plan de mejoras", "Certificación", "Seguimiento"]
-    },
-    {
       icon: <Settings className="w-12 h-12 text-blue-600" />,
       title: "Consultoría CRM y ERP",
       description: "Optimización de sistemas de gestión empresarial para mejorar la eficiencia operativa y la experiencia del cliente.",

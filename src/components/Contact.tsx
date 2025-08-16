@@ -136,7 +136,6 @@ export const Contact = () => {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="transcripcion">Transcripción de Audio en Tiempo Real</SelectItem>
-                      <SelectItem value="auditoria">Auditoría ISO 27001</SelectItem>
                       <SelectItem value="crm-erp">Consultoría CRM/ERP</SelectItem>
                       <SelectItem value="capacitacion">Capacitaciones Tecnológicas</SelectItem>
                       <SelectItem value="cv">Creación de CV Profesional</SelectItem>
@@ -185,7 +184,7 @@ export const Contact = () => {
                   <Mail className="w-5 h-5 text-cyan-300 mr-4" />
                   <div>
                     <p className="text-white font-semibold">Email</p>
-                    <p className="text-blue-200">contacto@miiao.com</p>
+                    <p className="text-blue-200">contacto@aloytech.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -208,7 +207,7 @@ export const Contact = () => {
             <Card className="bg-white/10 backdrop-blur-sm border-blue-300/30">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-white">
-                  ¿Por qué elegir MIIAO?
+                  ¿Por qué elegir AloyTech?
                 </CardTitle>
               </CardHeader>
               <CardContent>
