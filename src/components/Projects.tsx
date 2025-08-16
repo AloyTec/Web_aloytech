@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Stethoscope, FileUser, ArrowRight } from "lucide-react";
@@ -6,7 +5,7 @@ import { Stethoscope, FileUser, ArrowRight } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
-      icon: <Stethoscope className="w-16 h-16 text-blue-600" />,
+      icon: <Stethoscope className="w-16 h-16 text-primary-foreground" />,
       title: "Soluciones de Salud con IA",
       description: "Desarrollo de sistemas avanzados de transcripción en tiempo real para el sector salud, mejorando la documentación médica y la atención al paciente.",
       highlights: [
@@ -19,7 +18,7 @@ export const Projects = () => {
       results: "Implementado en 15+ centros médicos con 99.2% de precisión"
     },
     {
-      icon: <FileUser className="w-16 h-16 text-blue-600" />,
+      icon: <FileUser className="w-16 h-16 text-primary-foreground" />,
       title: "Plataforma de CV Inteligente",
       description: "Creación de una plataforma integral para la elaboración de currículums profesionales con apoyo de periodistas especializados y optimización automática.",
       highlights: [
@@ -34,13 +33,13 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="proyectos" className="py-16 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <section id="proyectos" className="py-16 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Proyectos Destacados
           </h2>
-          <p className="text-xl text-blue-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Casos de éxito que demuestran nuestro compromiso con la innovación 
             y la excelencia en cada solución desarrollada
           </p>
@@ -48,12 +47,12 @@ export const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-blue-200 hover:border-blue-400 overflow-hidden">
-              <CardHeader className="bg-gradient-to-br from-blue-600 to-cyan-600 text-white relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-border hover:border-primary overflow-hidden">
+              <CardHeader className="bg-primary text-primary-foreground relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-foreground/10 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative z-10">
                   <div className="flex items-center mb-4">
-                    <div className="p-3 bg-white/20 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="p-3 bg-primary-foreground/20 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
                       {project.icon}
                     </div>
                     <div>
@@ -62,7 +61,7 @@ export const Projects = () => {
                       </CardTitle>
                     </div>
                   </div>
-                  <CardDescription className="text-blue-100 text-base leading-relaxed">
+                  <CardDescription className="text-primary-foreground/80 text-base leading-relaxed">
                     {project.description}
                   </CardDescription>
                 </div>
@@ -70,11 +69,11 @@ export const Projects = () => {
 
               <CardContent className="p-6">
                 <div className="mb-6">
-                  <h4 className="font-semibold text-blue-900 mb-3">Características Principales:</h4>
+                  <h4 className="font-semibold text-foreground mb-3">Características Principales:</h4>
                   <ul className="space-y-2">
                     {project.highlights.map((highlight, highlightIndex) => (
-                      <li key={highlightIndex} className="flex items-center text-blue-700">
-                        <ArrowRight className="w-4 h-4 text-cyan-500 mr-3 flex-shrink-0" />
+                      <li key={highlightIndex} className="flex items-center text-muted-foreground">
+                        <ArrowRight className="w-4 h-4 text-success mr-3 flex-shrink-0" />
                         {highlight}
                       </li>
                     ))}
@@ -82,19 +81,19 @@ export const Projects = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-blue-900 mb-3">Tecnologías Utilizadas:</h4>
+                  <h4 className="font-semibold text-foreground mb-3">Tecnologías Utilizadas:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-blue-100 text-blue-800 hover:bg-blue-200">
+                      <Badge key={techIndex} variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/80">
                         {tech}
                       </Badge>
                     ))}
                   </div>
                 </div>
 
-                <div className="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border-l-4 border-blue-500">
-                  <h4 className="font-semibold text-blue-900 mb-2">Resultados:</h4>
-                  <p className="text-blue-700 text-sm">{project.results}</p>
+                <div className="p-4 bg-accent rounded-lg border-l-4 border-primary">
+                  <h4 className="font-semibold text-foreground mb-2">Resultados:</h4>
+                  <p className="text-muted-foreground text-sm">{project.results}</p>
                 </div>
               </CardContent>
             </Card>

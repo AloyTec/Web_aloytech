@@ -6,51 +6,57 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main colors from new palette */
+    --background: 0 0% 100%; /* White */
+    --foreground: 210 11% 24%; /* Dark gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 11% 24%; /* Dark gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 11% 24%; /* Dark gray */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary blue from logo */
+    --primary: 207 90% 54%; /* AloyTech blue */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary using light gray */
+    --secondary: 210 17% 98%; /* Light gray */
+    --secondary-foreground: 210 11% 24%; /* Dark gray */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted using light gray */
+    --muted: 210 17% 98%; /* Light gray */
+    --muted-foreground: 210 11% 46%; /* Medium gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent using light blue */
+    --accent: 207 90% 94%; /* Light blue */
+    --accent-foreground: 210 11% 24%; /* Dark gray */
+
+    /* Success/Interactive using tech green */
+    --success: 146 100% 45%; /* Tech green */
+    --success-foreground: 0 0% 100%; /* White */
+
+    /* Warning/CTA using coral */
+    --warning: 14 100% 63%; /* Coral */
+    --warning-foreground: 0 0% 100%; /* White */
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 17% 98%; /* Light gray */
+    --input: 210 17% 98%; /* Light gray */
+    --ring: 207 90% 54%; /* Primary blue */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%; /* White */
+    --sidebar-foreground: 210 11% 24%; /* Dark gray */
+    --sidebar-primary: 207 90% 54%; /* Primary blue */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 207 90% 94%; /* Light blue */
+    --sidebar-accent-foreground: 210 11% 24%; /* Dark gray */
+    --sidebar-border: 210 17% 98%; /* Light gray */
+    --sidebar-ring: 207 90% 54%; /* Primary blue */
   }
 
   .dark {

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-blue-100 z-50">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -25,8 +24,8 @@ export const Header = () => {
               className="h-10 w-auto"
             />
             <div>
-              <h1 className="text-xl font-bold text-blue-900">AloyTech</h1>
-              <p className="text-sm text-blue-600">SOLUCIONES TECNOLÓGICAS</p>
+              <h1 className="text-xl font-bold text-primary">AloyTech</h1>
+              <p className="text-sm text-muted-foreground">SOLUCIONES TECNOLÓGICAS</p>
             </div>
           </div>
 
@@ -34,31 +33,31 @@ export const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('inicio')}
-              className="text-blue-700 hover:text-blue-900 transition-colors"
+              className="text-foreground hover:text-primary transition-colors"
             >
               Inicio
             </button>
             <button 
               onClick={() => scrollToSection('servicios')}
-              className="text-blue-700 hover:text-blue-900 transition-colors"
+              className="text-foreground hover:text-primary transition-colors"
             >
               Servicios
             </button>
             <button 
               onClick={() => scrollToSection('proyectos')}
-              className="text-blue-700 hover:text-blue-900 transition-colors"
+              className="text-foreground hover:text-primary transition-colors"
             >
               Proyectos
             </button>
             <button 
               onClick={() => scrollToSection('contacto')}
-              className="text-blue-700 hover:text-blue-900 transition-colors"
+              className="text-foreground hover:text-primary transition-colors"
             >
               Contacto
             </button>
             <Button 
               onClick={() => scrollToSection('contacto')}
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+              className="bg-primary hover:bg-primary/90"
             >
               Consulta Gratis
             </Button>
@@ -75,35 +74,35 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-blue-100">
+          <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-3 mt-4">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className="text-left text-blue-700 hover:text-blue-900 transition-colors py-2"
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
               >
                 Inicio
               </button>
               <button 
                 onClick={() => scrollToSection('servicios')}
-                className="text-left text-blue-700 hover:text-blue-900 transition-colors py-2"
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
               >
                 Servicios
               </button>
               <button 
                 onClick={() => scrollToSection('proyectos')}
-                className="text-left text-blue-700 hover:text-blue-900 transition-colors py-2"
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
               >
                 Proyectos
               </button>
               <button 
                 onClick={() => scrollToSection('contacto')}
-                className="text-left text-blue-700 hover:text-blue-900 transition-colors py-2"
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
               >
                 Contacto
               </button>
               <Button 
                 onClick={() => scrollToSection('contacto')}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 w-full mt-2"
+                className="bg-primary hover:bg-primary/90 w-full mt-2"
               >
                 Consulta Gratis
               </Button>
