@@ -25,13 +25,11 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
-            Transformamos tu empresa con
-            <span className="block text-accent">Inteligencia Artificial</span>
+            <span className="block text-accent">Transformamos tu empresa</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Especialistas en transcripción de audio en tiempo real, 
-            consultoría CRM/ERP y capacitaciones tecnológicas que impulsan tu negocio.
+            Tu socio estratégico en automatización, sistemas de gestión y desarrollo tecnológico empresarial.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
