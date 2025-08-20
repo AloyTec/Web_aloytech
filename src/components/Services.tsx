@@ -1,14 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mic, Shield, Settings, GraduationCap, FileText, Users } from "lucide-react";
+import { Settings, GraduationCap, Users } from "lucide-react";
 
 export const Services = () => {
   const services = [
-    {
-      icon: <Mic className="w-12 h-12 text-primary" />,
-      title: "Transcripción de Audio en Tiempo Real",
-      description: "Soluciones avanzadas de IA para convertir audio a texto con precisión excepcional, ideales para reuniones, conferencias y documentación médica.",
-      features: ["Precisión del 99%", "Múltiples idiomas", "Integración API", "Tiempo real"]
-    },
     {
       icon: <Settings className="w-12 h-12 text-primary" />,
       title: "Consultoría CRM y ERP",
@@ -20,12 +14,6 @@ export const Services = () => {
       title: "Capacitaciones Tecnológicas",
       description: "Programas de formación especializada en tecnologías emergentes, IA y transformación digital.",
       features: ["Cursos personalizados", "Certificaciones", "Modalidad virtual", "Soporte continuo"]
-    },
-    {
-      icon: <FileText className="w-12 h-12 text-primary" />,
-      title: "Creación de CV Profesional",
-      description: "Servicio especializado de creación y optimización de currículums con apoyo de periodistas profesionales.",
-      features: ["Diseño profesional", "Contenido optimizado", "ATS compatible", "Revisión periodística"]
     },
     {
       icon: <Users className="w-12 h-12 text-primary" />,
