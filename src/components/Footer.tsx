@@ -9,16 +9,17 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-4 mb-4">
             <img 
-              src="/lovable-uploads/abf01c4c-4a50-460f-9efa-988bddd73e18.png" 
-              alt="AloyTech Logo" 
+              src="/lovable-uploads/f0641d3f-27dc-4b7a-8155-4221a82b53dd.png" 
+              alt="AloyTech Brain Icon" 
               className="h-12 w-auto"
             />
-            <div>
-              <h3 className="text-2xl font-bold">AloyTech</h3>
-              <p className="text-accent">SOLUCIONES TECNOLÓGICAS</p>
-            </div>
+            <img 
+              src="/lovable-uploads/35800f66-0d70-4bb3-9d63-02701e70452b.png" 
+              alt="AloyTech" 
+              className="h-10 w-auto filter brightness-0 invert"
+            />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Transformamos empresas a través de la innovación tecnológica y la inteligencia artificial. 

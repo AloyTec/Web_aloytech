@@ -19,14 +19,15 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/abf01c4c-4a50-460f-9efa-988bddd73e18.png" 
-              alt="AloyTech Logo" 
+              src="/lovable-uploads/f0641d3f-27dc-4b7a-8155-4221a82b53dd.png" 
+              alt="AloyTech Brain Icon" 
               className="h-10 w-auto"
             />
-            <div>
-              <h1 className="text-xl font-bold text-primary">AloyTech</h1>
-              <p className="text-sm text-muted-foreground">SOLUCIONES TECNOLÓGICAS</p>
-            </div>
+            <img 
+              src="/lovable-uploads/35800f66-0d70-4bb3-9d63-02701e70452b.png" 
+              alt="AloyTech" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
