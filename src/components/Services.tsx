@@ -1,13 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Settings, GraduationCap, Users } from "lucide-react";
+import { Settings, GraduationCap, Users, Palette, Target } from "lucide-react";
 
 export const Services = () => {
   const services = [
     {
       icon: <Settings className="w-12 h-12 text-primary" />,
-      title: "Consultoría CRM y ERP",
-      description: "Optimización de sistemas de gestión empresarial para mejorar la eficiencia operativa y la experiencia del cliente.",
-      features: ["Análisis de procesos", "Implementación", "Integración", "Optimización"]
+      title: "Consultoría tecnológica",
+      description: "Especialidades tecnológicas para impulsar la transformación digital de tu empresa.",
+      features: ["Aplicaciones Web", "Diseño UI/UX", "Inteligencia Artificial"]
     },
     {
       icon: <GraduationCap className="w-12 h-12 text-primary" />,
@@ -20,6 +20,18 @@ export const Services = () => {
       title: "Desarrollo de Aplicaciones",
       description: "Creación de soluciones tecnológicas personalizadas con enfoque en IA y automatización de procesos.",
       features: ["Desarrollo a medida", "Tecnologías modernas", "Escalabilidad", "Mantenimiento"]
+    },
+    {
+      icon: <Palette className="w-12 h-12 text-primary" />,
+      title: "Agencia Diseño gráfico",
+      description: "Servicios creativos de diseño visual para fortalecer la identidad de tu marca.",
+      features: ["Identidad corporativa", "Diseño web", "Material publicitario", "Branding"]
+    },
+    {
+      icon: <Target className="w-12 h-12 text-primary" />,
+      title: "PMO Service",
+      description: "Gestión profesional de proyectos para asegurar el éxito de tus iniciativas empresariales.",
+      features: ["Planificación estratégica", "Control de calidad", "Gestión de riesgos", "Seguimiento continuo"]
     }
   ];
 
