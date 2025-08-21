@@ -25,11 +25,11 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
-            <span className="block text-accent">Transformamos tu empresa</span>
+            <span className="block text-accent">El futuro de tu empresa comienza hoy</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Tu socio estratégico en automatización, sistemas de gestión y desarrollo tecnológico empresarial.
+            Transformamos problemas operativos en ventajas competitivas
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
