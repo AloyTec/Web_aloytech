@@ -6,29 +6,16 @@ export const Projects = () => {
   const projects = [
     {
       icon: <Stethoscope className="w-16 h-16 text-primary-foreground" />,
-      title: "Soluciones de Salud con IA",
-      description: "Desarrollo de sistemas avanzados de transcripción en tiempo real para el sector salud, mejorando la documentación médica y la atención al paciente.",
+      title: "MedConsult",
+      description: "Plataforma de transcripción médica inteligente que automatiza la documentación clínica, mejorando la eficiencia y precisión en el sector salud.",
       highlights: [
-        "Transcripción médica precisa",
-        "Integración con sistemas hospitalarios",
-        "Cumplimiento normativo HIPAA",
-        "Reducción del 80% en tiempo de documentación"
+        "Transcripción Inteligente",
+        "Clasificación Automática",
+        "App Móvil Intuitiva",
+        "Arquitectura Serverless"
       ],
-      technologies: ["Inteligencia Artificial", "Machine Learning", "APIs REST", "Seguridad Médica"],
-      results: "Implementado en 15+ centros médicos con 99.2% de precisión"
-    },
-    {
-      icon: <FileUser className="w-16 h-16 text-primary-foreground" />,
-      title: "Plataforma de CV Inteligente",
-      description: "Creación de una plataforma integral para la elaboración de currículums profesionales con apoyo de periodistas especializados y optimización automática.",
-      highlights: [
-        "Editor inteligente de CV",
-        "Revisión periodística profesional",
-        "Optimización para ATS",
-        "Templates personalizables"
-      ],
-      technologies: ["React", "NLP", "Content Management", "Design Systems"],
-      results: "Más de 1,000 CVs creados con 85% de tasa de éxito en entrevistas"
+      technologies: ["Inteligencia Artificial", "Machine Learning", "React Native", "AWS Lambda"],
+      results: "Reducción del 85% en tiempo de documentación médica con precisión del 99.3%"
     }
   ];
 
