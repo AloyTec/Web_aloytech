@@ -51,20 +51,6 @@ export const Hero = () => {
             </Button>
           </div>
           
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent mb-2">+50</div>
-              <div className="text-primary-foreground/80">Proyectos Completados</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent mb-2">99%</div>
-              <div className="text-primary-foreground/80">Precisión en Transcripción</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent mb-2">24/7</div>
-              <div className="text-primary-foreground/80">Soporte Técnico</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
