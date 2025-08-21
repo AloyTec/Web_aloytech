@@ -1,37 +1,31 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Settings, GraduationCap, Users, Palette, Target } from "lucide-react";
+import { Target, Code, Rocket, GraduationCap } from "lucide-react";
 
 export const Services = () => {
   const services = [
     {
-      icon: <Settings className="w-12 h-12 text-primary" />,
-      title: "Consultoría tecnológica",
-      description: "Especialidades tecnológicas para impulsar la transformación digital de tu empresa.",
-      features: ["Aplicaciones Web", "Diseño UI/UX", "Inteligencia Artificial"]
+      icon: <Target className="w-12 h-12 text-primary" />,
+      title: "Consultoría Estratégica",
+      description: "Análisis profundo y estrategia tecnológica personalizada para transformar tu operación",
+      features: ["Diagnóstico integral de procesos", "Roadmap de transformación digital", "Implementación de IA y automatización", "Optimización de workflows existentes"]
+    },
+    {
+      icon: <Code className="w-12 h-12 text-primary" />,
+      title: "Desarrollo de Soluciones",
+      description: "Creamos aplicaciones y sistemas que resuelven problemas reales",
+      features: ["Aplicaciones web", "Sistemas de gestión (CRM/ERP)", "Automatización de procesos"]
+    },
+    {
+      icon: <Rocket className="w-12 h-12 text-primary" />,
+      title: "Gestión de Proyectos",
+      description: "Lideramos tu transformación tecnológica con metodologías ágiles y resultados garantizados",
+      features: ["PMO especializado en tecnología", "Metodologías ágiles (Scrum/Kanban)", "Control de calidad y riesgos"]
     },
     {
       icon: <GraduationCap className="w-12 h-12 text-primary" />,
-      title: "Capacitaciones Tecnológicas",
-      description: "Programas de formación especializada en tecnologías emergentes, IA y transformación digital.",
-      features: ["Cursos personalizados", "Certificaciones", "Modalidad virtual", "Soporte continuo"]
-    },
-    {
-      icon: <Users className="w-12 h-12 text-primary" />,
-      title: "Desarrollo de Aplicaciones",
-      description: "Creación de soluciones tecnológicas personalizadas con enfoque en IA y automatización de procesos.",
-      features: ["Desarrollo a medida", "Tecnologías modernas", "Escalabilidad", "Mantenimiento"]
-    },
-    {
-      icon: <Palette className="w-12 h-12 text-primary" />,
-      title: "Agencia Diseño gráfico",
-      description: "Servicios creativos de diseño visual para fortalecer la identidad de tu marca.",
-      features: ["Identidad corporativa", "Diseño web", "Material publicitario", "Branding"]
-    },
-    {
-      icon: <Target className="w-12 h-12 text-primary" />,
-      title: "PMO Service",
-      description: "Gestión profesional de proyectos para asegurar el éxito de tus iniciativas empresariales.",
-      features: ["Planificación estratégica", "Control de calidad", "Gestión de riesgos", "Seguimiento continuo"]
+      title: "Capacitación & Adopción",
+      description: "Preparamos a tu equipo para adoptar y dominar las nuevas tecnologías implementadas",
+      features: ["Programas de formación personalizados", "Capacitación en IA y herramientas digitales", "Soporte post-implementación"]
     }
   ];
 
