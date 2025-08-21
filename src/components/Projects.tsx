@@ -14,7 +14,7 @@ export const Projects = () => {
         "App Móvil Intuitiva",
         "Arquitectura Serverless"
       ],
-      technologies: ["Inteligencia Artificial", "Machine Learning", "React Native", "AWS Lambda"],
+      technologies: ["Inteligencia Artificial", "Machine Learning", "React Native"],
       results: "Reducción del 85% en tiempo de documentación médica con precisión del 99.3%"
     }
   ];
