@@ -17,16 +17,11 @@ export const Header = () => {
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <img 
-              src="/lovable-uploads/f0641d3f-27dc-4b7a-8155-4221a82b53dd.png" 
-              alt="AloyTech Brain Icon" 
-              className="h-10 w-auto"
-            />
-            <img 
-              src="/lovable-uploads/35800f66-0d70-4bb3-9d63-02701e70452b.png" 
+              src="/lovable-uploads/aloytech-logo.png" 
               alt="AloyTech" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
