@@ -16,28 +16,28 @@
     --popover: 0 0% 100%; /* White */
     --popover-foreground: 210 11% 24%; /* Dark gray */
 
-    /* Primary dark blue from text logo */
-    --primary: 210 15% 35%; /* AloyTech dark blue */
+    /* Primary - Navy blue from logo */
+    --primary: 200 48% 33%; /* Navy blue from logo */
     --primary-foreground: 0 0% 100%; /* White */
 
-    /* Secondary using coral/orange from brain icon */
-    --secondary: 14 85% 65%; /* Coral from brain icon */
+    /* Secondary - Vibrant coral from logo */
+    --secondary: 12 100% 64%; /* Coral from logo */
     --secondary-foreground: 0 0% 100%; /* White */
 
     /* Muted using light neutrals */
     --muted: 210 17% 98%; /* Light gray */
     --muted-foreground: 210 11% 46%; /* Medium gray */
 
-    /* Accent using lighter coral */
-    --accent: 14 100% 85%; /* Light coral */
-    --accent-foreground: 210 15% 35%; /* Dark blue */
+    /* Accent - Light coral variation */
+    --accent: 12 100% 75%; /* Light coral */
+    --accent-foreground: 200 48% 33%; /* Navy blue */
 
-    /* Success/Interactive using complementary green */
+    /* Success/Interactive using complementary color */
     --success: 146 100% 45%; /* Tech green */
     --success-foreground: 0 0% 100%; /* White */
 
-    /* Warning/CTA using vibrant coral */
-    --warning: 14 100% 63%; /* Vibrant coral */
+    /* Warning/CTA - Vibrant coral */
+    --warning: 12 100% 64%; /* Vibrant coral matching logo */
     --warning-foreground: 0 0% 100%; /* White */
 
     --destructive: 0 84.2% 60.2%;
