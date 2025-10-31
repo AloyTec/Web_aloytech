@@ -19,9 +19,18 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-primary-foreground max-w-3xl mx-auto leading-relaxed">
-            Hacemos que la tecnología trabaje para ti
+          <div className="flex items-center justify-center mb-6">
+            <Sparkles className="w-8 h-8 text-accent mr-3" />
+            <span className="text-accent font-semibold">AloyTech | Soluciones de IA y Transformación Digital</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
+            <span className="block text-accent">Hacemos que la tecnología trabaje para ti</span>
           </h1>
+          
+          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Transformamos problemas operativos en ventajas competitivas
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
