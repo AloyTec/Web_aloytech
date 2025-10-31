@@ -21,7 +21,7 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6">
             <Sparkles className="w-8 h-8 text-accent mr-3" />
-            <span className="text-accent font-semibold">Innovación en IA y Operaciones</span>
+            <span className="text-accent font-semibold">AloyTech | Soluciones de IA y Transformación Digital</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
