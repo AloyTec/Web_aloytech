@@ -63,9 +63,8 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-accent">Contacto</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>contacto@aloytech.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>Operaciones globales</li>
+              <li>info@aloytech.cl</li>
+              <li>Santiago, Chile</li>
             </ul>
           </div>
         </div>

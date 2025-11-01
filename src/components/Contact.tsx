@@ -183,21 +183,14 @@ export const Contact = () => {
                   <Mail className="w-5 h-5 text-accent mr-4" />
                   <div>
                     <p className="text-primary-foreground font-semibold">Email</p>
-                    <p className="text-primary-foreground/80">contacto@aloytech.com</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-accent mr-4" />
-                  <div>
-                    <p className="text-primary-foreground font-semibold">Teléfono</p>
-                    <p className="text-primary-foreground/80">+1 (555) 123-4567</p>
+                    <p className="text-primary-foreground/80">info@aloytech.cl</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 text-accent mr-4" />
                   <div>
                     <p className="text-primary-foreground font-semibold">Ubicación</p>
-                    <p className="text-primary-foreground/80">Operaciones globales</p>
+                    <p className="text-primary-foreground/80">Santiago, Chile</p>
                   </div>
                 </div>
               </CardContent>
