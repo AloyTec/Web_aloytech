@@ -32,6 +32,12 @@ export const Hero = () => {
             Convertimos tareas que toman horas en procesos automáticos que toman minutos. Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.
           </p>
           
+          <div className="mb-8 inline-block px-6 py-3 bg-accent/10 backdrop-blur-sm border border-accent/30 rounded-full">
+            <p className="text-lg md:text-xl font-semibold text-accent">
+              "Automatiza lo repetitivo, enfócate en lo importante"
+            </p>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={scrollToContact}
