@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SearchCheck, Code, Rocket, GraduationCap } from "lucide-react";
+import { SearchCheck, Code, ClipboardCheck, GraduationCap } from "lucide-react";
 
 export const Services = () => {
   const services = [
@@ -16,10 +16,10 @@ export const Services = () => {
       features: ["Aplicaciones web", "Sistemas de gestión (CRM/ERP)", "Automatización de procesos"]
     },
     {
-      icon: <Rocket className="w-12 h-12 text-primary" />,
+      icon: <ClipboardCheck className="w-12 h-12 text-primary" />,
       title: "Gestión de Proyectos",
-      description: "Lideramos tu transformación tecnológica con metodologías ágiles y resultados garantizados",
-      features: ["PMO especializado en tecnología", "Metodologías ágiles (Scrum/Kanban)", "Control de calidad y riesgos"]
+      description: "Coordinamos todo el proceso de implementación para que no tengas que preocuparte de los detalles técnicos. Te mantenemos informado en cada paso y nos aseguramos de cumplir plazos.",
+      features: ["Coordinación completa del proyecto de principio a fin", "Reportes claros sobre el avance (sin jerga técnica)", "Resolvemos problemas antes de que se conviertan en crisis"]
     },
     {
       icon: <GraduationCap className="w-12 h-12 text-primary" />,
