@@ -1,13 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Code, Rocket, GraduationCap } from "lucide-react";
+import { SearchCheck, Code, Rocket, GraduationCap } from "lucide-react";
 
 export const Services = () => {
   const services = [
     {
-      icon: <Target className="w-12 h-12 text-primary" />,
-      title: "Consultoría Estratégica",
-      description: "Análisis profundo y estrategia tecnológica personalizada para transformar tu operación",
-      features: ["Diagnóstico integral de procesos", "Roadmap de transformación digital", "Implementación de IA y automatización", "Optimización de workflows existentes"]
+      icon: <SearchCheck className="w-12 h-12 text-primary" />,
+      title: "Te ayudamos a encontrar dónde está el problema",
+      description: "Revisamos cómo trabaja tu empresa y te mostramos exactamente dónde pierdes tiempo o dinero. Luego te damos un plan claro para solucionarlo, paso a paso.",
+      features: ["Identificamos qué procesos te hacen perder tiempo", "Creamos un plan de mejora fácil de entender", "Te mostramos cómo la tecnología puede ayudarte específicamente", "Optimizamos lo que ya tienes antes de crear algo nuevo"]
     },
     {
       icon: <Code className="w-12 h-12 text-primary" />,
