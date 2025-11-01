@@ -29,7 +29,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Transformamos problemas operativos en ventajas competitivas
+            Convertimos tareas que toman horas en procesos automáticos que toman minutos. Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
