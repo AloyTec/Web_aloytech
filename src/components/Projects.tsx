@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Stethoscope, FileUser, ArrowRight } from "lucide-react";
+import { Stethoscope, ArrowRight } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
