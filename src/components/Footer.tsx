@@ -21,7 +21,7 @@ export const Footer = () => {
               className="h-10 w-auto filter brightness-0 invert"
             />
             </div>
-            <p className="text-muted-foreground mb-4 max-w-md">
+            <p className="text-background/70 mb-4 max-w-md">
               Transformamos empresas a través de la innovación tecnológica y la inteligencia artificial. 
               Soluciones integrales para la era digital.
             </p>
@@ -40,7 +40,7 @@ export const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-accent">Servicios</h4>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-background/70">
               <li>
                 <a href="#servicios" className="hover:text-background transition-colors">
                   Transcripción IA
@@ -62,15 +62,15 @@ export const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-accent">Contacto</h4>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-background/70">
               <li>info@aloytech.cl</li>
               <li>Santiago, Chile</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-muted mt-8 pt-8 text-center">
-          <p className="text-muted-foreground">
+        <div className="border-t border-background/20 mt-8 pt-8 text-center">
+          <p className="text-background/70">
             © {currentYear} AloyTech - SOLUCIONES TECNOLÓGICAS. Todos los derechos reservados.
           </p>
         </div>
