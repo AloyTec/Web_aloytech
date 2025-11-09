@@ -56,13 +56,6 @@ export const About = () => {
               </CardContent>
             </Card>
 
-            <div className="prose prose-lg max-w-none bg-background/85 backdrop-blur-md rounded-lg p-6">
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                Nuestra fundadora pasó años viendo el mismo problema: consultoras que hablaban en tecnicismos y clientes que no entendían qué estaban comprando. 
-                AloyTech nació para cambiar eso. Aquí traducimos lo complejo a lo simple.
-              </p>
-            </div>
-
             {/* Diferenciador */}
             <div className="bg-primary/90 backdrop-blur-md rounded-lg p-8 border border-primary/20">
               <h3 className="text-2xl font-bold text-white mb-4">

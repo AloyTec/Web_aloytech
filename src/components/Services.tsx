@@ -9,12 +9,11 @@ export const Services = () => {
     {
       icon: <SearchCheck className="w-12 h-12 text-primary" />,
       title: "Te ayudamos a encontrar dónde está el problema",
-      description: "Revisamos cómo trabaja tu empresa y te mostramos exactamente dónde pierdes tiempo o dinero. Luego te damos un plan claro para solucionarlo, paso a paso.",
+      description: "Revisamos cómo trabaja tu empresa y te mostramos exactamente dónde pierdes tiempo o dinero.",
       features: [
         "Identificamos qué procesos te hacen perder tiempo", 
         "Creamos un plan de mejora fácil de entender", 
         "Te mostramos cómo la tecnología puede ayudarte específicamente", 
-        "Optimizamos lo que ya tienes antes de crear algo nuevo"
       ]
     },
     {
@@ -22,15 +21,15 @@ export const Services = () => {
       title: "Desarrollamos tu solución a medida",
       description: "Creamos aplicaciones y sistemas que resuelven problemas reales",
       features: [
-        "Aplicaciones web", 
+        "Aplicaciones web y mobile", 
         "Sistemas de gestión", 
-        "Automatización de procesos"
+        "Automatización de procesos con IA"
       ]
     },
     {
       icon: <ClipboardCheck className="w-12 h-12 text-primary" />,
       title: "Gestión de Proyectos",
-      description: "Coordinamos todo el proceso de implementación para que no tengas que preocuparte de los detalles técnicos. Te mantenemos informado en cada paso y nos aseguramos de cumplir plazos.",
+      description: "Coordinamos todo el proceso de implementación para que no tengas que preocuparte de los detalles técnicos.",
       features: [
         "Coordinación completa del proyecto de principio a fin", 
         "Reportes claros del avance", 
