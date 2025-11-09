@@ -35,18 +35,18 @@ export const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:3px_3px_10px_rgba(0,0,0,0.9)]">
               Sobre Nosotros
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold leading-relaxed" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+            <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-semibold leading-relaxed [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
               AloyTech es más que una empresa de tecnología. Somos un puente entre 
               el mundo técnico y las personas que necesitan soluciones reales.
             </p>
           </div>
 
           {/* Main Content */}
-          <div className="space-y-8 mb-12">
+          <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
             <Card className="border-l-4 border-l-primary bg-background/85 backdrop-blur-md">
               <CardContent className="p-6">
                 <p className="text-lg text-foreground leading-relaxed">
@@ -81,8 +81,8 @@ export const About = () => {
           </div>
 
           {/* Lo que nos hace únicos */}
-          <div className="mb-12">
-            <h3 className="text-3xl font-bold text-white text-center mb-8" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <div className="mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-6 sm:mb-8 [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
               Lo que nos hace únicos
             </h3>
             <div 

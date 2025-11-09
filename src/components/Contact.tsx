@@ -79,17 +79,17 @@ export const Contact = () => {
       parallaxSpeed={0.4}
     >
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:3px_3px_10px_rgba(0,0,0,0.9)]">
             Hablemos de tu Proyecto
           </h2>
-          <p className="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
             Estamos listos para transformar tus ideas en soluciones innovadoras. 
             Contáctanos para una consulta gratuita.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="bg-background/90 backdrop-blur-md border-border/50">
             <CardHeader>
@@ -101,8 +101,8 @@ export const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Formulario de contacto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" aria-label="Formulario de contacto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <Label htmlFor="name" className="text-foreground mb-2 block">
                       Nombre Completo *
@@ -133,7 +133,7 @@ export const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <Label htmlFor="phone" className="text-foreground mb-2 block">
                       Teléfono

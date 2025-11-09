@@ -52,15 +52,15 @@ export const Services = () => {
   return (
     <section 
       id="servicios" 
-      className="py-16 relative"
+      className="py-12 sm:py-16 relative"
     >
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:3px_3px_10px_rgba(0,0,0,0.9)]">
             Nuestros Servicios
           </h2>
-          <p className="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
             Soluciones integrales de tecnología e inteligencia artificial para impulsar 
             la transformación digital de tu empresa
           </p>
@@ -68,27 +68,27 @@ export const Services = () => {
 
         <div 
           ref={elementRef}
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto transition-all duration-700 ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/50 bg-background/80 backdrop-blur-md">
-              <CardHeader className="text-center pb-4">
-                <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <CardHeader className="text-center pb-3 sm:pb-4">
+                <div className="flex justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground mb-2">
+                <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground leading-relaxed">
+                <CardDescription className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-4 sm:px-6">
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-sm text-foreground">
+                    <li key={featureIndex} className="flex items-start text-xs sm:text-sm text-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
                       <span>{feature}</span>
                     </li>

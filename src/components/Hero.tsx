@@ -34,7 +34,7 @@ export const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="pt-24 pb-16 text-primary-foreground relative overflow-hidden"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16 text-primary-foreground relative overflow-hidden"
       aria-label="Sección principal - Hero"
     >
       
@@ -45,40 +45,40 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Sparkles className="w-8 h-8 text-white drop-shadow-lg" />
-            <span className="text-white font-semibold" style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}>AloyTech | Soluciones de IA y Transformación Digital</span>
+          <div className="flex items-center justify-center mb-4 sm:mb-6">
+            <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow-lg" />
+            <span className="text-sm sm:text-base text-white font-semibold [text-shadow:1px_1px_4px_rgba(0,0,0,0.8)] sm:[text-shadow:2px_2px_6px_rgba(0,0,0,0.8)]">AloyTech | Soluciones de IA y Transformación Digital</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:3px_3px_10px_rgba(0,0,0,0.9)]">
             Hacemos que la tecnología trabaje para ti
           </h1>
           
-          <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
             Convertimos tareas que toman horas en procesos automáticos que toman minutos. Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.
           </p>
           
-          <div className="mb-8 inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white/20 backdrop-blur-md border border-white/40 rounded-full">
-            <p className="text-base sm:text-lg lg:text-xl font-semibold text-white" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
+          <div className="mb-6 sm:mb-8 inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white/20 backdrop-blur-md border border-white/40 rounded-full">
+            <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white [text-shadow:1px_1px_3px_rgba(0,0,0,0.6)] sm:[text-shadow:1px_1px_4px_rgba(0,0,0,0.7)]">
               "Automatiza lo repetitivo, enfócate en lo importante"
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg group shadow-xl"
+              className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group shadow-xl w-full sm:w-auto"
               aria-label="Comenzar un nuevo proyecto con AloyTech"
             >
               Comenzar Proyecto
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               onClick={scrollToServices}
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg bg-white/10 backdrop-blur-sm shadow-xl"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg bg-white/10 backdrop-blur-sm shadow-xl w-full sm:w-auto"
               aria-label="Ver todos nuestros servicios"
             >
               Ver Servicios

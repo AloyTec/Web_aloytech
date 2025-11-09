@@ -44,11 +44,11 @@ export const Projects = () => {
       parallaxSpeed={0.4}
     >
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
             Proyectos Destacados
           </h2>
-          <p className="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.7)' }}>
+          <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:1px_1px_6px_rgba(0,0,0,0.7)]">
             Casos de éxito que demuestran nuestro compromiso con la innovación 
             y la excelencia en cada solución desarrollada
           </p>

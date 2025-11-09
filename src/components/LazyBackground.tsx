@@ -21,7 +21,20 @@ export const LazyBackground = ({
 }: LazyBackgroundProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Detectar si es móvil (pantallas menores a 768px)
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,7 +64,8 @@ export const LazyBackground = ({
   }, [imageUrl, isLoaded]);
 
   useEffect(() => {
-    if (!parallax) return;
+    // Desactivar parallax en móvil
+    if (!parallax || isMobile) return;
 
     const handleScroll = () => {
       if (elementRef.current) {
@@ -68,22 +82,22 @@ export const LazyBackground = ({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [parallax, parallaxSpeed]);
+  }, [parallax, parallaxSpeed, isMobile]);
 
   return (
     <div
       id={id}
       ref={elementRef}
-      className={className}
       style={{
         ...style,
         backgroundImage: isLoaded ? `url(${imageUrl})` : 'none',
         backgroundColor: isLoaded ? 'transparent' : '#1E3A8A',
-        backgroundPosition: parallax ? `center calc(10% - ${offsetY}px)` : (style.backgroundPosition || 'center 10%'),
+        backgroundPosition: (parallax && !isMobile) ? `center calc(10% - ${offsetY}px)` : (style.backgroundPosition || 'center 10%'),
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         transition: 'background-image 0.3s ease-in-out',
         overflow: 'hidden',
+      }}overflow: 'hidden',
       }}
     >
       {children}
