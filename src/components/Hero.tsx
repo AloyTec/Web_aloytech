@@ -6,7 +6,28 @@ export const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contacto');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollToServices = () => {
+    const element = document.getElementById('servicios');
+    if (element) {
+      const headerOffset = 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -56,7 +77,7 @@ export const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={scrollToServices}
               className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg bg-white/10 backdrop-blur-sm shadow-xl"
               aria-label="Ver todos nuestros servicios"
             >
