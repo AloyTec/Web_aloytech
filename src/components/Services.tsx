@@ -33,7 +33,7 @@ export const Services = () => {
       description: "Coordinamos todo el proceso de implementación para que no tengas que preocuparte de los detalles técnicos. Te mantenemos informado en cada paso y nos aseguramos de cumplir plazos.",
       features: [
         "Coordinación completa del proyecto de principio a fin", 
-        "Reportes claros sobre el avance (sin jerga técnica)", 
+        "Reportes claros del avance", 
         "Anticipamos y resolvemos problemas antes de que te afecten"
       ]
     },
