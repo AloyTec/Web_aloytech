@@ -15,12 +15,8 @@ const Index = () => {
       {/* Wrapper con imagen de fondo continua para Hero y Services */}
       <LazyBackground
         imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/thisisengineering-sbVu5zitZt0-unsplash.jpg"
-        className="relative"
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat'
-        }}
+        className="relative block"
+        parallaxSpeed={0.3}
       >
         <Hero />
         <Services />
