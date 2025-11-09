@@ -8,44 +8,44 @@
   :root {
     /* Colores principales de la marca */
     --background: 0 0% 100%; /* White #FFFFFF */
-    --foreground: 210 29% 24%; /* Gris Oscuro #2C3E50 - texto principal */
+    --foreground: 221 83% 32%; /* Azul Navy #1E3A8A - texto principal */
 
     --card: 0 0% 100%; /* White */
-    --card-foreground: 210 29% 24%; /* Gris Oscuro */
+    --card-foreground: 221 83% 32%; /* Azul Navy */
 
     --popover: 0 0% 100%; /* White */
-    --popover-foreground: 210 29% 24%; /* Gris Oscuro */
+    --popover-foreground: 221 83% 32%; /* Azul Navy */
 
-    /* Primary - Teal/Azul Petróleo para fondos y elementos principales */
-    --primary: 197 27% 43%; /* Teal #517B8C */
+    /* Primary - Azul Cielo para fondos y elementos principales */
+    --primary: 217 91% 60%; /* Azul Cielo #3B82F6 */
     --primary-foreground: 0 0% 100%; /* White */
 
-    /* Secondary - Coral/Salmón para títulos y elementos destacados */
-    --secondary: 12 83% 72%; /* Coral #F29479 */
-    --secondary-foreground: 0 0% 100%; /* White */
+    /* Secondary - Azul Claro para elementos destacados */
+    --secondary: 214 95% 93%; /* Azul Claro #DBEAFE */
+    --secondary-foreground: 221 83% 32%; /* Azul Navy */
 
-    /* Muted usando off-white y gris claro */
-    --muted: 210 17% 98%; /* Off-White #F8F9FA */
-    --muted-foreground: 210 11% 46%; /* Gris Claro #6C757D */
+    /* Muted usando azul claro y navy suave */
+    --muted: 214 95% 93%; /* Azul Claro #DBEAFE */
+    --muted-foreground: 221 39% 41%; /* Navy suave */
 
-    /* Accent - Variación clara del coral */
-    --accent: 12 83% 82%; /* Light coral */
-    --accent-foreground: 210 29% 24%; /* Gris Oscuro */
+    /* Accent - Rosa suave para CTAs y elementos interactivos */
+    --accent: 340 82% 92%; /* Rosa Suave #FBDCE8 */
+    --accent-foreground: 221 83% 32%; /* Azul Navy */
 
     /* Success/Interactive */
     --success: 146 100% 45%; /* Tech green */
     --success-foreground: 0 0% 100%; /* White */
 
-    /* Warning/CTA - Azul Oscuro/Navy para botones CTA */
-    --warning: 197 34% 37%; /* Navy #3D6B7D */
+    /* Warning/CTA - Azul Navy para botones importantes */
+    --warning: 221 83% 32%; /* Azul Navy #1E3A8A */
     --warning-foreground: 0 0% 100%; /* White */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 17% 98%; /* Off-White */
-    --input: 210 17% 98%; /* Off-White */
-    --ring: 197 27% 43%; /* Teal */
+    --border: 214 95% 93%; /* Azul Claro */
+    --input: 214 95% 93%; /* Azul Claro */
+    --ring: 217 91% 60%; /* Azul Cielo */
 
     --radius: 0.5rem;
 

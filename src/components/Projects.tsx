@@ -1,12 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Stethoscope, ArrowRight } from "lucide-react";
+import { Stethoscope, ArrowRight, BarChart3 } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
     {
       icon: <Stethoscope className="w-16 h-16 text-primary-foreground" />,
-      title: "MedConsult",
+      title: "Transcripción Clínica Inteligente",
       description: "Plataforma de transcripción médica inteligente que automatiza la documentación clínica, mejorando la eficiencia y precisión en el sector salud.",
       highlights: [
         "Transcripción Inteligente",
@@ -16,6 +16,19 @@ export const Projects = () => {
       ],
       technologies: ["Inteligencia Artificial", "Machine Learning", "React Native"],
       results: "Reducción del 85% en tiempo de documentación médica con precisión del 99.3%"
+    },
+    {
+      icon: <BarChart3 className="w-16 h-16 text-primary-foreground" />,
+      title: "Optimización de Procesos Empresariales",
+      description: "Plataforma integral para la gestión, evaluación y optimización de procesos organizacionales con análisis de beneficios y priorización estratégica.",
+      highlights: [
+        "Dashboard con métricas en tiempo real",
+        "Calculadora de beneficios y ROI",
+        "Matriz de priorización estratégica",
+        "Formularios de levantamiento de procesos"
+      ],
+      technologies: ["React", "Node.js", "Analytics", "Dashboard"],
+      results: "Automatización del análisis de procesos con cálculo de ahorro anual, ROI y recomendaciones de implementación basadas en priorización"
     }
   ];
 

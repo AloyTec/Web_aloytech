@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { Mail, MapPin, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,19 +18,47 @@ export const Contact = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast.success("¡Mensaje enviado exitosamente! Te contactaremos pronto.");
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    
+    try {
+      // Configuración de EmailJS
+      const serviceId = 'service_djnht66';
+      const templateId = 'template_cfsfjpi'; // NECESITAS REEMPLAZAR ESTO con tu Template ID real
+      const publicKey = 'JHdxlNwy0cKjXR9Zp';
+      
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'No proporcionado',
+        company: formData.company || 'No proporcionado',
+        service: formData.service,
+        message: formData.message,
+        to_email: 'info@aloytech.cl'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast.success("¡Mensaje enviado exitosamente! Te contactaremos pronto.");
+      
+      // Limpiar el formulario
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error);
+      toast.error("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o escríbenos a info@aloytech.cl");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -161,8 +190,9 @@ export const Contact = () => {
                 <Button 
                   type="submit" 
                   className="w-full bg-warning hover:bg-warning/90 text-warning-foreground py-3 text-lg group"
+                  disabled={isSubmitting}
                 >
-                  Enviar Mensaje
+                  {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
                   <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>

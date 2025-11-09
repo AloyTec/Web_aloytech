@@ -7,25 +7,42 @@ export const Services = () => {
       icon: <SearchCheck className="w-12 h-12 text-primary" />,
       title: "Te ayudamos a encontrar dónde está el problema",
       description: "Revisamos cómo trabaja tu empresa y te mostramos exactamente dónde pierdes tiempo o dinero. Luego te damos un plan claro para solucionarlo, paso a paso.",
-      features: ["Identificamos qué procesos te hacen perder tiempo", "Creamos un plan de mejora fácil de entender", "Te mostramos cómo la tecnología puede ayudarte específicamente", "Optimizamos lo que ya tienes antes de crear algo nuevo"]
+      features: [
+        "Identificamos qué procesos te hacen perder tiempo", 
+        "Creamos un plan de mejora fácil de entender", 
+        "Te mostramos cómo la tecnología puede ayudarte específicamente", 
+        "Optimizamos lo que ya tienes antes de crear algo nuevo"
+      ]
     },
     {
       icon: <Code className="w-12 h-12 text-primary" />,
       title: "Desarrollo de Soluciones",
       description: "Creamos aplicaciones y sistemas que resuelven problemas reales",
-      features: ["Aplicaciones web", "Sistemas de gestión (CRM/ERP)", "Automatización de procesos"]
+      features: [
+        "Aplicaciones web", 
+        "Sistemas de gestión (CRM/ERP)", 
+        "Automatización de procesos"
+      ]
     },
     {
       icon: <ClipboardCheck className="w-12 h-12 text-primary" />,
       title: "Gestión de Proyectos",
       description: "Coordinamos todo el proceso de implementación para que no tengas que preocuparte de los detalles técnicos. Te mantenemos informado en cada paso y nos aseguramos de cumplir plazos.",
-      features: ["Coordinación completa del proyecto de principio a fin", "Reportes claros sobre el avance (sin jerga técnica)", "Resolvemos problemas antes de que se conviertan en crisis"]
+      features: [
+        "Coordinación completa del proyecto de principio a fin", 
+        "Reportes claros sobre el avance (sin jerga técnica)", 
+        "Resolvemos problemas antes de que se conviertan en crisis"
+      ]
     },
     {
       icon: <GraduationCap className="w-12 h-12 text-primary" />,
       title: "Capacitación & Adopción",
       description: "Preparamos a tu equipo para adoptar y dominar las nuevas tecnologías implementadas",
-      features: ["Programas de formación personalizados", "Capacitación en IA y herramientas digitales", "Soporte post-implementación"]
+      features: [
+        "Programas de formación personalizados", 
+        "Capacitación en IA y herramientas digitales", 
+        "Soporte post-implementación"
+      ]
     }
   ];
 
@@ -42,7 +59,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/50">
               <CardHeader className="text-center pb-4">
@@ -59,9 +76,9 @@ export const Services = () => {
               <CardContent>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-foreground">
-                      <div className="w-2 h-2 bg-success rounded-full mr-3"></div>
-                      {feature}
+                    <li key={featureIndex} className="flex items-start text-sm text-foreground">
+                      <div className="w-2 h-2 bg-success rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>

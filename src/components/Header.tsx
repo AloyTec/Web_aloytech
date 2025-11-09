@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { About } from "./About";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +45,12 @@ export const Header = () => {
               className="text-foreground hover:text-primary transition-colors"
             >
               Proyectos
+            </button>
+            <button 
+              onClick={() => scrollToSection('nosotros')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Nosotros
             </button>
             <button 
               onClick={() => scrollToSection('contacto')}

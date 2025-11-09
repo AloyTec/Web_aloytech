@@ -1,0 +1,121 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Lightbulb, Users, GraduationCap, TrendingUp } from "lucide-react";
+
+export const About = () => {
+  const uniqueFeatures = [
+    {
+      icon: <Lightbulb className="w-8 h-8 text-accent" />,
+      title: "Traducimos lo complejo en simple",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-accent" />,
+      title: "Gestionamos proyectos con excelencia técnica y humana",
+    },
+    {
+      icon: <GraduationCap className="w-8 h-8 text-accent" />,
+      title: "Enseñamos mientras implementamos",
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-accent" />,
+      title: "Cerramos la brecha entre la tecnología y las personas",
+    },
+  ];
+
+  return (
+    <section id="nosotros" className="py-16 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Sobre Nosotros
+            </h2>
+            <p className="text-2xl md:text-3xl text-primary font-semibold leading-relaxed">
+              AloyTech es más que una empresa de tecnología. Somos un puente entre 
+              el mundo técnico y las personas que necesitan soluciones reales.
+            </p>
+          </div>
+
+          {/* Main Content */}
+          <div className="space-y-8 mb-12">
+            <Card className="border-l-4 border-l-primary bg-muted/30">
+              <CardContent className="p-6">
+                <p className="text-lg text-foreground leading-relaxed">
+                  <span className="font-bold text-primary">Fundada en 2025</span>, AloyTech nació con una misión clara: 
+                  <span className="font-semibold"> democratizar la tecnología y hacerla accesible para todos.</span>
+                </p>
+              </CardContent>
+            </Card>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                Somos una empresa de soluciones tecnológicas especializada en inteligencia artificial 
+                y transformación digital. Nuestra fundadora, una ingeniera con profunda experiencia 
+                en gestión de proyectos y desarrollo tecnológico, identificó una necesidad crítica 
+                en el mercado: empresas que requieren soluciones innovadoras explicadas en términos 
+                comprensibles.
+              </p>
+            </div>
+
+            {/* Diferenciador */}
+            <div className="bg-primary/5 rounded-lg p-8 border border-primary/20">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Nuestra diferencia está en cómo comunicamos.
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                Combinamos excelencia técnica con habilidades de gestión excepcionales, 
+                traduciendo conceptos complejos en soluciones claras y accionables. 
+                No usamos tecnicismos innecesarios; explicamos, enseñamos y acompañamos 
+                a nuestros clientes en cada paso de su transformación digital.
+              </p>
+            </div>
+          </div>
+
+          {/* Lo que nos hace únicos */}
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-foreground text-center mb-8">
+              Lo que nos hace únicos
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {uniqueFeatures.map((feature, index) => (
+                <Card 
+                  key={index} 
+                  className="group hover:shadow-lg transition-all duration-300 border-border hover:border-accent"
+                >
+                  <CardContent className="p-6 flex items-start space-x-4">
+                    <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    <p className="text-foreground font-medium leading-relaxed">
+                      {feature.title}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Filosofía */}
+          <div className="text-center mb-12">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Creemos que la mejor tecnología es aquella que todos pueden entender y aprovechar. 
+              Por eso, cada proyecto es una oportunidad para educar, empoderar y transformar.
+            </p>
+          </div>
+
+          {/* Resultado Final */}
+          <Card className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground border-0 shadow-xl">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Resultado:
+              </h3>
+              <p className="text-xl md:text-2xl font-semibold">
+                Soluciones tecnológicas que tus equipos entienden, adoptan y aprovechan al máximo.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
