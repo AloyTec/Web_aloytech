@@ -34,7 +34,7 @@ export const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="pt-20 sm:pt-24 pb-12 sm:pb-16 text-primary-foreground relative overflow-hidden"
+      className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 text-primary-foreground relative overflow-hidden"
       aria-label="Sección principal - Hero"
     >
       
@@ -45,23 +45,23 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-4 sm:mb-6">
-            <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow-lg" />
-            <span className="text-sm sm:text-base text-white font-semibold [text-shadow:1px_1px_4px_rgba(0,0,0,0.8)] sm:[text-shadow:2px_2px_6px_rgba(0,0,0,0.8)]">AloyTech | Soluciones de IA y Transformación Digital</span>
+          <div className="flex items-center justify-center mb-3 sm:mb-4 md:mb-6 gap-2">
+            <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white drop-shadow-lg flex-shrink-0" />
+            <span className="text-xs sm:text-sm md:text-base text-white font-semibold [text-shadow:1px_1px_4px_rgba(0,0,0,0.8)] sm:[text-shadow:2px_2px_6px_rgba(0,0,0,0.8)]">AloyTech | Soluciones de IA y Transformación Digital</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:3px_3px_10px_rgba(0,0,0,0.9)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 text-white [text-shadow:2px_2px_6px_rgba(0,0,0,0.8)] sm:[text-shadow:3px_3px_10px_rgba(0,0,0,0.9)] leading-tight">
             Hacemos que la tecnología trabaje para ti
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
             Convertimos tareas que toman horas en procesos automáticos que toman minutos.
-            <br />
-            Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.
+            <br className="hidden sm:block" />
+            <span className="block sm:inline mt-1 sm:mt-0">Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.</span>
           </p>
           
-          <div className="mb-6 sm:mb-8 inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white/20 backdrop-blur-md border border-white/40 rounded-full">
-            <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white [text-shadow:1px_1px_3px_rgba(0,0,0,0.6)] sm:[text-shadow:1px_1px_4px_rgba(0,0,0,0.7)]">
+          <div className="mb-4 sm:mb-6 md:mb-8 inline-block px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 bg-white/20 backdrop-blur-md border border-white/40 rounded-full">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-white [text-shadow:1px_1px_3px_rgba(0,0,0,0.6)] sm:[text-shadow:1px_1px_4px_rgba(0,0,0,0.7)]">
               "Automatiza lo repetitivo, enfócate en lo importante"
             </p>
           </div>
