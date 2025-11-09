@@ -17,7 +17,7 @@ export const LazyBackground = ({
   style = {}, 
   id, 
   parallax = true,
-  parallaxSpeed = 0.4
+  parallaxSpeed = 0.25
 }: LazyBackgroundProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
@@ -67,20 +67,45 @@ export const LazyBackground = ({
     // Desactivar parallax en móvil
     if (!parallax || isMobile) return;
 
-    const handleScroll = () => {
+    let ticking = false;
+    let animationFrameId: number;
+
+    const updateParallax = () => {
       if (elementRef.current) {
         const rect = elementRef.current.getBoundingClientRect();
-        const elementTop = rect.top;
-        const offset = elementTop * parallaxSpeed;
-        setOffsetY(offset);
+        const scrollPosition = window.scrollY;
+        const elementTop = rect.top + scrollPosition;
+        const elementHeight = rect.height;
+        const windowHeight = window.innerHeight;
+        
+        // Calcular el progreso del scroll relativo al elemento
+        const scrollProgress = (scrollPosition + windowHeight - elementTop) / (windowHeight + elementHeight);
+        
+        // Aplicar el efecto parallax solo cuando el elemento está visible
+        if (scrollProgress >= 0 && scrollProgress <= 1) {
+          const offset = (scrollProgress - 0.5) * 100 * parallaxSpeed;
+          setOffsetY(offset);
+        }
+      }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        animationFrameId = requestAnimationFrame(updateParallax);
+        ticking = true;
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    // Calcular la posición inicial
+    updateParallax();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, [parallax, parallaxSpeed, isMobile]);
 
@@ -93,11 +118,15 @@ export const LazyBackground = ({
         ...style,
         backgroundImage: isLoaded ? `url(${imageUrl})` : 'none',
         backgroundColor: isLoaded ? 'transparent' : '#1E3A8A',
-        backgroundPosition: (parallax && !isMobile) ? `center calc(10% - ${offsetY}px)` : (style.backgroundPosition || 'center 10%'),
+        backgroundPosition: (parallax && !isMobile) 
+          ? `center calc(50% + ${offsetY}px)` 
+          : (style.backgroundPosition || 'center center'),
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundAttachment: (parallax && !isMobile) ? 'scroll' : 'scroll',
         transition: 'background-image 0.3s ease-in-out',
         overflow: 'hidden',
+        willChange: (parallax && !isMobile) ? 'background-position' : 'auto',
       }}
     >
       {children}

@@ -44,7 +44,7 @@ export const Projects = () => {
       id="proyectos"
       imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/minh-pham-AHCmAX0k_J4-unsplash.jpg"
       className="py-16 relative block"
-      parallaxSpeed={0.4}
+      parallaxSpeed={0.3}
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
