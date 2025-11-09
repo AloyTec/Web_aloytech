@@ -6,9 +6,9 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="md:col-span-2">
+          <div>
             <div className="mb-4">
               <p className="text-primary-foreground/80 max-w-md mb-4">
                 Soluciones integrales para la era digital.
@@ -32,22 +32,44 @@ export const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
-                  Consultoría
+                  Consultoría Estratégica
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
-                  Desarrollo de Aplicaciones
+                  Desarrollo de Soluciones
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
-                  Capacitaciones Tecnológicas
+                  Capacitación & Adopción
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
                   Gestión de Proyectos
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-primary-foreground">Recursos</h4>
+            <ul className="space-y-2 text-primary-foreground/80">
+              <li>
+                <a href="#privacidad" className="hover:text-primary-foreground transition-colors">
+                  Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a href="#terminos" className="hover:text-primary-foreground transition-colors">
+                  Términos de Servicio
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-primary-foreground transition-colors">
+                  Preguntas Frecuentes (FAQ)
                 </a>
               </li>
             </ul>

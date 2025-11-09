@@ -84,8 +84,9 @@ export const Contact = () => {
             Hablemos de tu Proyecto
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
-            Estamos listos para transformar tus ideas en soluciones innovadoras. 
-            Contáctanos para una consulta gratuita.
+            ¿Listo para automatizar procesos y ahorrar tiempo? 
+            <br />
+            Cuéntanos tu situación y te mostramos cómo podemos ayudarte.
           </p>
         </div>
 
@@ -171,10 +172,11 @@ export const Contact = () => {
                       <SelectValue placeholder="Selecciona un servicio" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="consultoria">Consultoría</SelectItem>
-                      <SelectItem value="desarrollo">Desarrollo de Aplicaciones</SelectItem>
-                      <SelectItem value="capacitacion">Capacitaciones Tecnológicas</SelectItem>
-                      <SelectItem value="gestion-proyectos">Planificación y/o Gestión de proyectos</SelectItem>
+                      <SelectItem value="consultoria">CConsultoría Estratégica</SelectItem>
+                      <SelectItem value="desarrollo">Desarrollo de Soluciones</SelectItem>
+                      <SelectItem value="capacitacion">Capacitación & Adopción</SelectItem>
+                      <SelectItem value="gestion-proyectos">Gestión de Proyectos</SelectItem>
+                      <SelectItem value="no-seguro">No estoy seguro / Necesito asesoría</SelectItem>
                       <SelectItem value="otro">Otro</SelectItem>
                     </SelectContent>
                   </Select>
@@ -207,7 +209,7 @@ export const Contact = () => {
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     className="bg-background border-border text-foreground placeholder:text-muted-foreground min-h-[120px]"
-                    placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..."
+                    placeholder="Cuéntanos: ¿Qué proceso manual te gustaría automatizar? ¿Cuánto tiempo pierdes en ello?"
                     required
                   />
                 </div>
@@ -262,19 +264,19 @@ export const Contact = () => {
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Experiencia comprobada en soluciones de IA</span>
+                    <span>Experiencia real: proyectos funcionando en salud, gestión y más</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Soporte técnico especializado 24/7</span>
+                    <span>Soporte continuo: estamos cuando nos necesitas</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Implementación rápida y eficiente</span>
+                    <span>Implementación ágil: resultados en 2-8 semanas</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Garantía de satisfacción al 100%</span>
+                    <span>GSi no funciona como prometimos, lo arreglamos sin costo</span>
                   </li>
                 </ul>
               </CardContent>

@@ -88,6 +88,7 @@ export const LazyBackground = ({
     <div
       id={id}
       ref={elementRef}
+      className={className}
       style={{
         ...style,
         backgroundImage: isLoaded ? `url(${imageUrl})` : 'none',
@@ -97,7 +98,6 @@ export const LazyBackground = ({
         backgroundRepeat: 'no-repeat',
         transition: 'background-image 0.3s ease-in-out',
         overflow: 'hidden',
-      }}overflow: 'hidden',
       }}
     >
       {children}

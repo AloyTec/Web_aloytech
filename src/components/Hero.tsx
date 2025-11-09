@@ -55,7 +55,9 @@ export const Hero = () => {
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
-            Convertimos tareas que toman horas en procesos automáticos que toman minutos. Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.
+            Convertimos tareas que toman horas en procesos automáticos que toman minutos.
+            <br />
+            Lo explicamos en español simple, sin tecnicismos: soluciones claras con resultados medibles.
           </p>
           
           <div className="mb-6 sm:mb-8 inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white/20 backdrop-blur-md border border-white/40 rounded-full">
@@ -71,7 +73,7 @@ export const Hero = () => {
               className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group shadow-xl w-full sm:w-auto"
               aria-label="Comenzar un nuevo proyecto con AloyTech"
             >
-              Comenzar Proyecto
+              Cuéntanos tu caso
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 

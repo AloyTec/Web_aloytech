@@ -13,7 +13,7 @@ export const About = () => {
     },
     {
       icon: <Users className="w-8 h-8 text-primary" />,
-      title: "Gestionamos proyectos con excelencia técnica y humana",
+      title: "Gestionamos proyectos con rigor técnico y empatía humana",
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-primary" />,
@@ -21,7 +21,7 @@ export const About = () => {
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-primary" />,
-      title: "Cerramos la brecha entre la tecnología y las personas",
+      title: "Acercamos la tecnología a quien la necesita",
     },
   ];
 
@@ -58,11 +58,8 @@ export const About = () => {
 
             <div className="prose prose-lg max-w-none bg-background/85 backdrop-blur-md rounded-lg p-6">
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                Somos una empresa de soluciones tecnológicas especializada en inteligencia artificial 
-                y transformación digital. Nuestra fundadora, una ingeniera con profunda experiencia 
-                en gestión de proyectos y desarrollo tecnológico, identificó una necesidad crítica 
-                en el mercado: empresas que requieren soluciones innovadoras explicadas en términos 
-                comprensibles.
+                Nuestra fundadora pasó años viendo el mismo problema: consultoras que hablaban en tecnicismos y clientes que no entendían qué estaban comprando. 
+                AloyTech nació para cambiar eso. Aquí traducimos lo complejo a lo simple.
               </p>
             </div>
 
@@ -72,10 +69,9 @@ export const About = () => {
                 Nuestra diferencia está en cómo comunicamos.
               </h3>
               <p className="text-white/95 leading-relaxed text-base md:text-lg">
-                Combinamos excelencia técnica con habilidades de gestión excepcionales, 
-                traduciendo conceptos complejos en soluciones claras y accionables. 
-                No usamos tecnicismos innecesarios; explicamos, enseñamos y acompañamos 
-                a nuestros clientes en cada paso de su transformación digital.
+                No hablamos en código. Explicamos cada decisión técnica en español simple. No usamos jerga para impresionar. 
+                Trabajamos hasta que entiendas exactamente qué estamos haciendo, por qué lo hacemos así y qué vas a ganar con ello. 
+                Luego te acompañamos para que tu equipo también lo entienda.
               </p>
             </div>
           </div>

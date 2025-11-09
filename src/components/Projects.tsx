@@ -11,28 +11,31 @@ export const Projects = () => {
     {
       icon: <Stethoscope className="w-16 h-16 text-primary-foreground" />,
       title: "Transcripción Clínica Inteligente",
-      description: "Plataforma de transcripción médica inteligente que automatiza la documentación clínica, mejorando la eficiencia y precisión en el sector salud.",
+      description: "Los médicos dictan sus consultas y el sistema escribe automáticamente todo lo que dijeron, organizado y listo para guardar. Ahorra horas de trabajo manual.",
       highlights: [
         "Transcripción Inteligente",
         "Clasificación Automática",
-        "App Móvil Intuitiva",
-        "Arquitectura Serverless"
+        "App Intuitiva",
       ],
-      technologies: ["Inteligencia Artificial", "Machine Learning", "React Native"],
+      idealFor: ["Clínicas Médicas", "Hospitales", "Consultorios Privados", "Centros de Salud"],
       results: "Reducción del 85% en tiempo de documentación médica con precisión del 99.3%"
     },
     {
       icon: <BarChart3 className="w-16 h-16 text-primary-foreground" />,
       title: "Optimización de Procesos Empresariales",
-      description: "Plataforma integral para la gestión, evaluación y optimización de procesos organizacionales con análisis de beneficios y priorización estratégica.",
+      description: "Sistema que identifica qué procesos de tu empresa te hacen perder tiempo y dinero, calcula cuánto puedes ahorrar y te dice por dónde empezar a mejorar.",
       highlights: [
-        "Dashboard con métricas en tiempo real",
-        "Calculadora de beneficios y ROI",
-        "Matriz de priorización estratégica",
-        "Formularios de levantamiento de procesos"
+        "Panel de control que muestra tus ahorros al instante",
+        "Calculadora que te dice cuánto dinero ahorrarás",
+        "Te dice qué problemas resolver primero",
+        "Formularios fáciles para documentar cómo trabajas"
       ],
-      technologies: ["React", "Node.js", "Analytics", "Dashboard"],
-      results: "Automatización del análisis de procesos con cálculo de ahorro anual, ROI y recomendaciones de implementación basadas en priorización"
+      idealFor: ["PYMEs", "Empresas en Crecimiento", "Startups", "Negocios Familiares"],
+      results: [
+        "Identifica automáticamente dónde pierdes dinero", 
+        "Calcula cuánto ahorrarías al año", 
+        "Te recomienda qué mejorar primero según el impacto"
+      ]
     }
   ];
 
@@ -49,8 +52,7 @@ export const Projects = () => {
             Proyectos Destacados
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:1px_1px_6px_rgba(0,0,0,0.7)]">
-            Casos de éxito que demuestran nuestro compromiso con la innovación 
-            y la excelencia en cada solución desarrollada
+            Ejemplos de cómo convertimos problemas en soluciones
           </p>
         </div>
 
@@ -95,11 +97,11 @@ export const Projects = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-foreground mb-3">Tecnologías Utilizadas:</h4>
+                  <h4 className="font-semibold text-foreground mb-3">Ideal Para:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-secondary text-foreground hover:bg-secondary/80">
-                        {tech}
+                    {project.idealFor.map((client, clientIndex) => (
+                      <Badge key={clientIndex} variant="secondary" className="bg-secondary text-foreground hover:bg-secondary/80">
+                        {client}
                       </Badge>
                     ))}
                   </div>
@@ -107,7 +109,18 @@ export const Projects = () => {
 
                 <div className="p-4 bg-secondary/30 rounded-lg border-l-4 border-primary">
                   <h4 className="font-semibold text-foreground mb-2">Resultados:</h4>
-                  <p className="text-muted-foreground text-sm">{project.results}</p>
+                  {Array.isArray(project.results) ? (
+                    <ul className="space-y-2">
+                      {project.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="flex items-start text-muted-foreground text-sm">
+                          <ArrowRight className="w-4 h-4 text-success mr-3 flex-shrink-0 mt-0.5" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-muted-foreground text-sm">{project.results}</p>
+                  )}
                 </div>
               </CardContent>
             </Card>

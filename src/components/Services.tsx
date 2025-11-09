@@ -19,11 +19,11 @@ export const Services = () => {
     },
     {
       icon: <Code className="w-12 h-12 text-primary" />,
-      title: "Desarrollo de Soluciones",
+      title: "Desarrollamos tu solución a medida",
       description: "Creamos aplicaciones y sistemas que resuelven problemas reales",
       features: [
         "Aplicaciones web", 
-        "Sistemas de gestión (CRM/ERP)", 
+        "Sistemas de gestión", 
         "Automatización de procesos"
       ]
     },
@@ -34,7 +34,7 @@ export const Services = () => {
       features: [
         "Coordinación completa del proyecto de principio a fin", 
         "Reportes claros sobre el avance (sin jerga técnica)", 
-        "Resolvemos problemas antes de que se conviertan en crisis"
+        "Anticipamos y resolvemos problemas antes de que te afecten"
       ]
     },
     {
@@ -61,8 +61,7 @@ export const Services = () => {
             Nuestros Servicios
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto [text-shadow:1px_1px_4px_rgba(0,0,0,0.7)] sm:[text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
-            Soluciones integrales de tecnología e inteligencia artificial para impulsar 
-            la transformación digital de tu empresa
+            Todo lo que necesitas para automatizar procesos y hacer crecer tu empresa
           </p>
         </div>
 
