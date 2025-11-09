@@ -17,7 +17,7 @@ export const LazyBackground = ({
   style = {}, 
   id, 
   parallax = true,
-  parallaxSpeed = 0.5
+  parallaxSpeed = 0.4
 }: LazyBackgroundProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [offsetY, setOffsetY] = useState(0);

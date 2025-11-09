@@ -30,7 +30,7 @@ export const About = () => {
       id="nosotros"
       imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/brooke-cagle-G0hS-5j0sT0-unsplash.jpg"
       className="py-16 relative block"
-      parallaxSpeed={0.3}
+      parallaxSpeed={0.4}
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">

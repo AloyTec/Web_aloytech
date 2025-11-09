@@ -16,7 +16,7 @@ const Index = () => {
       <LazyBackground
         imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/thisisengineering-sbVu5zitZt0-unsplash.jpg"
         className="relative block"
-        parallaxSpeed={0.3}
+        parallaxSpeed={0.4}
       >
         <Hero />
         <Services />
