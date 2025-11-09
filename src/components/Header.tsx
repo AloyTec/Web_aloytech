@@ -29,7 +29,7 @@ export const Header = () => {
             <img 
               src="/lovable-uploads/aloytech-logo.png" 
               alt="AloyTech" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 

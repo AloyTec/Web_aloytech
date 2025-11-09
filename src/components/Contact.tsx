@@ -69,13 +69,22 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="py-16 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <section 
+      id="contacto" 
+      className="py-16 relative"
+      style={{
+        backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
             Hablemos de tu Proyecto
           </h2>
-          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
+          <p className="text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             Estamos listos para transformar tus ideas en soluciones innovadoras. 
             Contáctanos para una consulta gratuita.
           </p>
@@ -83,12 +92,12 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30">
+          <Card className="bg-background/90 backdrop-blur-md border-border/50">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary-foreground">
+              <CardTitle className="text-2xl font-bold text-foreground">
                 Solicita tu Consulta Gratuita
               </CardTitle>
-              <CardDescription className="text-primary-foreground/80">
+              <CardDescription className="text-muted-foreground">
                 Completa el formulario y te contactaremos en menos de 24 horas
               </CardDescription>
             </CardHeader>
@@ -96,7 +105,7 @@ export const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-primary-foreground mb-2 block">
+                    <Label htmlFor="name" className="text-foreground mb-2 block">
                       Nombre Completo *
                     </Label>
                     <Input
@@ -104,13 +113,13 @@ export const Contact = () => {
                       type="text"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60"
+                      className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                       placeholder="Tu nombre completo"
                       required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-primary-foreground mb-2 block">
+                    <Label htmlFor="email" className="text-foreground mb-2 block">
                       Email *
                     </Label>
                     <Input
@@ -118,7 +127,7 @@ export const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60"
+                      className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                       placeholder="tu@email.com"
                       required
                     />
@@ -127,7 +136,7 @@ export const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="phone" className="text-primary-foreground mb-2 block">
+                    <Label htmlFor="phone" className="text-foreground mb-2 block">
                       Teléfono
                     </Label>
                     <Input
@@ -135,12 +144,12 @@ export const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60"
+                      className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                       placeholder="+1 234 567 8900"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="company" className="text-primary-foreground mb-2 block">
+                    <Label htmlFor="company" className="text-foreground mb-2 block">
                       Empresa
                     </Label>
                     <Input
@@ -148,18 +157,18 @@ export const Contact = () => {
                       type="text"
                       value={formData.company}
                       onChange={(e) => handleInputChange('company', e.target.value)}
-                      className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60"
+                      className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                       placeholder="Nombre de tu empresa"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="service" className="text-primary-foreground mb-2 block">
+                  <Label htmlFor="service" className="text-foreground mb-2 block">
                     Servicio de Interés *
                   </Label>
                   <Select value={formData.service} onValueChange={(value) => handleInputChange('service', value)}>
-                    <SelectTrigger className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground">
+                    <SelectTrigger className="bg-background border-border text-foreground">
                       <SelectValue placeholder="Selecciona un servicio" />
                     </SelectTrigger>
                     <SelectContent>
@@ -174,14 +183,14 @@ export const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-primary-foreground mb-2 block">
+                  <Label htmlFor="message" className="text-foreground mb-2 block">
                     Mensaje *
                   </Label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    className="bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 min-h-[120px]"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground min-h-[120px]"
                     placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..."
                     required
                   />
@@ -189,7 +198,7 @@ export const Contact = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-warning hover:bg-warning/90 text-warning-foreground py-3 text-lg group"
+                  className="w-full bg-primary hover:bg-primary/90 text-white py-3 text-lg group shadow-xl"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
@@ -201,41 +210,41 @@ export const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30">
+            <Card className="bg-background/90 backdrop-blur-md border-border/50">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary-foreground flex items-center">
-                  <Mail className="w-6 h-6 mr-3 text-accent" />
+                <CardTitle className="text-2xl font-bold text-foreground flex items-center">
+                  <Mail className="w-6 h-6 mr-3 text-primary" />
                   Información de Contacto
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-accent mr-4" />
+                  <Mail className="w-5 h-5 text-primary mr-4" />
                   <div>
-                    <p className="text-primary-foreground font-semibold">Email</p>
-                    <p className="text-primary-foreground/80">info@aloytech.cl</p>
+                    <p className="text-foreground font-semibold">Email</p>
+                    <p className="text-muted-foreground">info@aloytech.cl</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="w-5 h-5 text-accent mr-4" />
+                  <MapPin className="w-5 h-5 text-primary mr-4" />
                   <div>
-                    <p className="text-primary-foreground font-semibold">Ubicación</p>
-                    <p className="text-primary-foreground/80">Santiago, Chile</p>
+                    <p className="text-foreground font-semibold">Ubicación</p>
+                    <p className="text-muted-foreground">Santiago, Chile</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30">
+            <Card className="bg-background/90 backdrop-blur-md border-border/50">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary-foreground">
+                <CardTitle className="text-2xl font-bold text-foreground">
                   ¿Por qué elegir AloyTech?
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 text-primary-foreground/80">
+                <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Experiencia comprobada en soluciones de IA</span>
                   </li>
                   <li className="flex items-start">

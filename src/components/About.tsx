@@ -4,33 +4,42 @@ import { Lightbulb, Users, GraduationCap, TrendingUp } from "lucide-react";
 export const About = () => {
   const uniqueFeatures = [
     {
-      icon: <Lightbulb className="w-8 h-8 text-accent" />,
+      icon: <Lightbulb className="w-8 h-8 text-primary" />,
       title: "Traducimos lo complejo en simple",
     },
     {
-      icon: <Users className="w-8 h-8 text-accent" />,
+      icon: <Users className="w-8 h-8 text-primary" />,
       title: "Gestionamos proyectos con excelencia técnica y humana",
     },
     {
-      icon: <GraduationCap className="w-8 h-8 text-accent" />,
+      icon: <GraduationCap className="w-8 h-8 text-primary" />,
       title: "Enseñamos mientras implementamos",
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-accent" />,
+      icon: <TrendingUp className="w-8 h-8 text-primary" />,
       title: "Cerramos la brecha entre la tecnología y las personas",
     },
   ];
 
   return (
-    <section id="nosotros" className="py-16 bg-background">
-      <div className="container mx-auto px-4">
+    <section 
+      id="nosotros" 
+      className="py-16 relative"
+      style={{
+        backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/brooke-cagle-G0hS-5j0sT0-unsplash.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
               Sobre Nosotros
             </h2>
-            <p className="text-2xl md:text-3xl text-primary font-semibold leading-relaxed">
+            <p className="text-2xl md:text-3xl text-white font-semibold leading-relaxed" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               AloyTech es más que una empresa de tecnología. Somos un puente entre 
               el mundo técnico y las personas que necesitan soluciones reales.
             </p>
@@ -38,7 +47,7 @@ export const About = () => {
 
           {/* Main Content */}
           <div className="space-y-8 mb-12">
-            <Card className="border-l-4 border-l-primary bg-muted/30">
+            <Card className="border-l-4 border-l-primary bg-background/85 backdrop-blur-md">
               <CardContent className="p-6">
                 <p className="text-lg text-foreground leading-relaxed">
                   <span className="font-bold text-primary">Fundada en 2025</span>, AloyTech nació con una misión clara: 
@@ -47,7 +56,7 @@ export const About = () => {
               </CardContent>
             </Card>
 
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none bg-background/85 backdrop-blur-md rounded-lg p-6">
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 Somos una empresa de soluciones tecnológicas especializada en inteligencia artificial 
                 y transformación digital. Nuestra fundadora, una ingeniera con profunda experiencia 
@@ -58,11 +67,11 @@ export const About = () => {
             </div>
 
             {/* Diferenciador */}
-            <div className="bg-primary/5 rounded-lg p-8 border border-primary/20">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+            <div className="bg-primary/90 backdrop-blur-md rounded-lg p-8 border border-primary/20">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Nuestra diferencia está en cómo comunicamos.
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+              <p className="text-white/95 leading-relaxed text-base md:text-lg">
                 Combinamos excelencia técnica con habilidades de gestión excepcionales, 
                 traduciendo conceptos complejos en soluciones claras y accionables. 
                 No usamos tecnicismos innecesarios; explicamos, enseñamos y acompañamos 
@@ -73,14 +82,14 @@ export const About = () => {
 
           {/* Lo que nos hace únicos */}
           <div className="mb-12">
-            <h3 className="text-3xl font-bold text-foreground text-center mb-8">
+            <h3 className="text-3xl font-bold text-white text-center mb-8" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               Lo que nos hace únicos
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {uniqueFeatures.map((feature, index) => (
                 <Card 
                   key={index} 
-                  className="group hover:shadow-lg transition-all duration-300 border-border hover:border-accent"
+                  className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary bg-background/85 backdrop-blur-md"
                 >
                   <CardContent className="p-6 flex items-start space-x-4">
                     <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -96,15 +105,15 @@ export const About = () => {
           </div>
 
           {/* Filosofía */}
-          <div className="text-center mb-12">
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <div className="text-center mb-12 bg-background/85 backdrop-blur-md rounded-lg p-6">
+            <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto">
               Creemos que la mejor tecnología es aquella que todos pueden entender y aprovechar. 
               Por eso, cada proyecto es una oportunidad para educar, empoderar y transformar.
             </p>
           </div>
 
           {/* Resultado Final */}
-          <Card className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground border-0 shadow-xl">
+          <Card className="bg-primary/90 backdrop-blur-md text-primary-foreground border-0 shadow-xl">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Resultado:

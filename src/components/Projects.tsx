@@ -33,13 +33,22 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="proyectos" className="py-16 bg-secondary">
-      <div className="container mx-auto px-4">
+    <section 
+      id="proyectos" 
+      className="py-16 relative"
+      style={{
+        backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/minh-pham-AHCmAX0k_J4-unsplash.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             Proyectos Destacados
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.7)' }}>
             Casos de éxito que demuestran nuestro compromiso con la innovación 
             y la excelencia en cada solución desarrollada
           </p>
@@ -47,8 +56,8 @@ export const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-border hover:border-primary overflow-hidden">
-              <CardHeader className="bg-primary text-primary-foreground relative">
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-border hover:border-primary overflow-hidden bg-background/80 backdrop-blur-md">
+              <CardHeader className="bg-primary/80 text-primary-foreground relative backdrop-blur-md">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary-foreground/10 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative z-10">
                   <div className="flex items-center mb-4">
@@ -84,14 +93,14 @@ export const Projects = () => {
                   <h4 className="font-semibold text-foreground mb-3">Tecnologías Utilizadas:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/80">
+                      <Badge key={techIndex} variant="secondary" className="bg-secondary text-foreground hover:bg-secondary/80">
                         {tech}
                       </Badge>
                     ))}
                   </div>
                 </div>
 
-                <div className="p-4 bg-accent rounded-lg border-l-4 border-primary">
+                <div className="p-4 bg-secondary/30 rounded-lg border-l-4 border-primary">
                   <h4 className="font-semibold text-foreground mb-2">Resultados:</h4>
                   <p className="text-muted-foreground text-sm">{project.results}</p>
                 </div>
