@@ -34,34 +34,39 @@ export const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8" aria-label="Navegación principal">
             <button 
               onClick={() => scrollToSection('inicio')}
               className="text-foreground hover:text-primary transition-colors"
+              aria-label="Ir a la sección de Inicio"
             >
               Inicio
             </button>
             <button 
               onClick={() => scrollToSection('servicios')}
               className="text-foreground hover:text-primary transition-colors"
+              aria-label="Ir a la sección de Servicios"
             >
               Servicios
             </button>
             <button 
               onClick={() => scrollToSection('proyectos')}
               className="text-foreground hover:text-primary transition-colors"
+              aria-label="Ir a la sección de Proyectos"
             >
               Proyectos
             </button>
             <button 
               onClick={() => scrollToSection('nosotros')}
               className="text-foreground hover:text-primary transition-colors"
+              aria-label="Ir a la sección Sobre Nosotros"
             >
               Nosotros
             </button>
             <Button 
               onClick={() => scrollToSection('contacto')}
               className="bg-primary hover:bg-primary/90"
+              aria-label="Ir al formulario de Contacto"
             >
               Contacto
             </Button>
@@ -71,6 +76,8 @@ export const Header = () => {
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -78,35 +85,40 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-border">
+          <nav className="md:hidden mt-4 pb-4 border-t border-border" aria-label="Navegación móvil">
             <div className="flex flex-col space-y-3 mt-4">
               <button 
                 onClick={() => scrollToSection('inicio')}
                 className="text-left text-foreground hover:text-primary transition-colors py-2"
+                aria-label="Ir a la sección de Inicio"
               >
                 Inicio
               </button>
               <button 
                 onClick={() => scrollToSection('servicios')}
                 className="text-left text-foreground hover:text-primary transition-colors py-2"
+                aria-label="Ir a la sección de Servicios"
               >
                 Servicios
               </button>
               <button 
                 onClick={() => scrollToSection('proyectos')}
                 className="text-left text-foreground hover:text-primary transition-colors py-2"
+                aria-label="Ir a la sección de Proyectos"
               >
                 Proyectos
               </button>
               <button 
                 onClick={() => scrollToSection('nosotros')}
                 className="text-left text-foreground hover:text-primary transition-colors py-2"
+                aria-label="Ir a la sección Sobre Nosotros"
               >
                 Nosotros
               </button>
               <Button 
                 onClick={() => scrollToSection('contacto')}
                 className="bg-primary hover:bg-primary/90 w-full mt-2"
+                aria-label="Ir al formulario de Contacto"
               >
                 Contacto
               </Button>

@@ -1,7 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Lightbulb, Users, GraduationCap, TrendingUp } from "lucide-react";
+import { LazyBackground } from "./LazyBackground";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const About = () => {
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
+  
   const uniqueFeatures = [
     {
       icon: <Lightbulb className="w-8 h-8 text-primary" />,
@@ -22,11 +26,11 @@ export const About = () => {
   ];
 
   return (
-    <section 
-      id="nosotros" 
+    <LazyBackground
+      id="nosotros"
+      imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/brooke-cagle-G0hS-5j0sT0-unsplash.jpg"
       className="py-16 relative"
       style={{
-        backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/brooke-cagle-G0hS-5j0sT0-unsplash.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -36,10 +40,10 @@ export const About = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
               Sobre Nosotros
             </h2>
-            <p className="text-2xl md:text-3xl text-white font-semibold leading-relaxed" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+            <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold leading-relaxed" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               AloyTech es más que una empresa de tecnología. Somos un puente entre 
               el mundo técnico y las personas que necesitan soluciones reales.
             </p>
@@ -85,7 +89,12 @@ export const About = () => {
             <h3 className="text-3xl font-bold text-white text-center mb-8" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               Lo que nos hace únicos
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div 
+              ref={elementRef}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               {uniqueFeatures.map((feature, index) => (
                 <Card 
                   key={index} 
@@ -125,6 +134,6 @@ export const About = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </LazyBackground>
   );
 };

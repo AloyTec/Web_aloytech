@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { Mail, MapPin, Send } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { LazyBackground } from "./LazyBackground";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ export const Contact = () => {
     phone: '',
     company: '',
     service: '',
+    otherService: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,7 +37,7 @@ export const Contact = () => {
         from_email: formData.email,
         phone: formData.phone || 'No proporcionado',
         company: formData.company || 'No proporcionado',
-        service: formData.service,
+        service: formData.service === 'otro' ? formData.otherService : formData.service,
         message: formData.message,
         to_email: 'info@aloytech.cl'
       };
@@ -51,6 +53,7 @@ export const Contact = () => {
         phone: '',
         company: '',
         service: '',
+        otherService: '',
         message: ''
       });
     } catch (error) {
@@ -69,11 +72,11 @@ export const Contact = () => {
   };
 
   return (
-    <section 
-      id="contacto" 
+    <LazyBackground
+      id="contacto"
+      imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.jpg"
       className="py-16 relative"
       style={{
-        backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -81,16 +84,16 @@ export const Contact = () => {
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
             Hablemos de tu Proyecto
           </h2>
-          <p className="text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             Estamos listos para transformar tus ideas en soluciones innovadoras. 
             Contáctanos para una consulta gratuita.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="bg-background/90 backdrop-blur-md border-border/50">
             <CardHeader>
@@ -102,7 +105,7 @@ export const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Formulario de contacto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name" className="text-foreground mb-2 block">
@@ -172,15 +175,32 @@ export const Contact = () => {
                       <SelectValue placeholder="Selecciona un servicio" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="transcripcion">Transcripción de Audio en Tiempo Real</SelectItem>
-                      <SelectItem value="crm-erp">Consultoría CRM/ERP</SelectItem>
-                      <SelectItem value="capacitacion">Capacitaciones Tecnológicas</SelectItem>
-                      <SelectItem value="cv">Creación de CV Profesional</SelectItem>
+                      <SelectItem value="consultoria">Consultoría</SelectItem>
                       <SelectItem value="desarrollo">Desarrollo de Aplicaciones</SelectItem>
+                      <SelectItem value="capacitacion">Capacitaciones Tecnológicas</SelectItem>
+                      <SelectItem value="gestion-proyectos">Planificación y/o Gestión de proyectos</SelectItem>
                       <SelectItem value="otro">Otro</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
+
+                {/* Campo condicional para "Otro" */}
+                {formData.service === 'otro' && (
+                  <div>
+                    <Label htmlFor="otherService" className="text-foreground mb-2 block">
+                      Especifica el servicio *
+                    </Label>
+                    <Input
+                      id="otherService"
+                      type="text"
+                      value={formData.otherService}
+                      onChange={(e) => handleInputChange('otherService', e.target.value)}
+                      className="bg-background border-border text-foreground placeholder:text-muted-foreground"
+                      placeholder="¿Qué servicio necesitas?"
+                      required={formData.service === 'otro'}
+                    />
+                  </div>
+                )}
 
                 <div>
                   <Label htmlFor="message" className="text-foreground mb-2 block">
@@ -200,6 +220,7 @@ export const Contact = () => {
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary/90 text-white py-3 text-lg group shadow-xl"
                   disabled={isSubmitting}
+                  aria-label={isSubmitting ? 'Enviando mensaje...' : 'Enviar mensaje de contacto'}
                 >
                   {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
                   <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -248,15 +269,15 @@ export const Contact = () => {
                     <span>Experiencia comprobada en soluciones de IA</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Soporte técnico especializado 24/7</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Implementación rápida y eficiente</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Garantía de satisfacción al 100%</span>
                   </li>
                 </ul>
@@ -265,6 +286,6 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </LazyBackground>
   );
 };

@@ -6,16 +6,17 @@ import { Projects } from "@/components/Projects";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { LazyBackground } from "@/components/LazyBackground";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       {/* Wrapper con imagen de fondo continua para Hero y Services */}
-      <div 
+      <LazyBackground
+        imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/thisisengineering-sbVu5zitZt0-unsplash.jpg"
         className="relative"
         style={{
-          backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/thisisengineering-sbVu5zitZt0-unsplash.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat'
@@ -23,7 +24,7 @@ const Index = () => {
       >
         <Hero />
         <Services />
-      </div>
+      </LazyBackground>
       <Projects />
       <About />
       <Contact />

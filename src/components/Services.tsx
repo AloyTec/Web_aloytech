@@ -1,7 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SearchCheck, Code, ClipboardCheck, GraduationCap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Services = () => {
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   const services = [
     {
       icon: <SearchCheck className="w-12 h-12 text-primary" />,
@@ -54,16 +57,21 @@ export const Services = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9)' }}>
             Nuestros Servicios
           </h2>
-          <p className="text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <p className="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             Soluciones integrales de tecnología e inteligencia artificial para impulsar 
             la transformación digital de tu empresa
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div 
+          ref={elementRef}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/50 bg-background/80 backdrop-blur-md">
               <CardHeader className="text-center pb-4">
@@ -81,7 +89,7 @@ export const Services = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start text-sm text-foreground">
-                      <div className="w-2 h-2 bg-success rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
                       <span>{feature}</span>
                     </li>
                   ))}

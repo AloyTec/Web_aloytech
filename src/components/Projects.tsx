@@ -1,8 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Stethoscope, ArrowRight, BarChart3 } from "lucide-react";
+import { LazyBackground } from "./LazyBackground";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Projects = () => {
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
+  
   const projects = [
     {
       icon: <Stethoscope className="w-16 h-16 text-primary-foreground" />,
@@ -33,11 +37,11 @@ export const Projects = () => {
   ];
 
   return (
-    <section 
-      id="proyectos" 
+    <LazyBackground
+      id="proyectos"
+      imageUrl="https://aloytech.s3.us-east-1.amazonaws.com/minh-pham-AHCmAX0k_J4-unsplash.jpg"
       className="py-16 relative"
       style={{
-        backgroundImage: 'url(https://aloytech.s3.us-east-1.amazonaws.com/minh-pham-AHCmAX0k_J4-unsplash.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -45,16 +49,21 @@ export const Projects = () => {
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
             Proyectos Destacados
           </h2>
-          <p className="text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.7)' }}>
+          <p className="text-lg sm:text-xl text-white/95 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.7)' }}>
             Casos de éxito que demuestran nuestro compromiso con la innovación 
             y la excelencia en cada solución desarrollada
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div 
+          ref={elementRef}
+          className={`grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-border hover:border-primary overflow-hidden bg-background/80 backdrop-blur-md">
               <CardHeader className="bg-primary/80 text-primary-foreground relative backdrop-blur-md">
@@ -109,6 +118,6 @@ export const Projects = () => {
           ))}
         </div>
       </div>
-    </section>
+    </LazyBackground>
   );
 };
