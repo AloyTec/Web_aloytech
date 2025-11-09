@@ -32,17 +32,22 @@ export const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
-                  Transcripción IA
+                  Consultoría
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
-                  Consultoría CRM/ERP
+                  Desarrollo de Aplicaciones
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary-foreground transition-colors">
-                  Capacitaciones
+                  Capacitaciones Tecnológicas
+                </a>
+              </li>
+              <li>
+                <a href="#servicios" className="hover:text-primary-foreground transition-colors">
+                  Gestión de Proyectos
                 </a>
               </li>
             </ul>
