@@ -172,7 +172,7 @@ export const Contact = () => {
                       <SelectValue placeholder="Selecciona un servicio" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="consultoria">CConsultoría Estratégica</SelectItem>
+                      <SelectItem value="consultoria">Consultoría Estratégica</SelectItem>
                       <SelectItem value="desarrollo">Desarrollo de Soluciones</SelectItem>
                       <SelectItem value="capacitacion">Capacitación & Adopción</SelectItem>
                       <SelectItem value="gestion-proyectos">Gestión de Proyectos</SelectItem>
@@ -276,7 +276,7 @@ export const Contact = () => {
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>GSi no funciona como prometimos, lo arreglamos sin costo</span>
+                    <span>Si no funciona como prometimos, lo arreglamos sin costo</span>
                   </li>
                 </ul>
               </CardContent>
